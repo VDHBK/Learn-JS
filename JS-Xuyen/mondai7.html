@@ -1,0 +1,26 @@
+<!--          <<<<<<<<<<<ĐỀ BÀI>>>>>>>>>>>>>>
+    Tương tự bài 6 nhưng áp dụng khái niệm: “n là số nguyên tố thì trong khoảng từ
+     2 đến căn bậc hai cua n sẽ không tồn tại số mà n chia hết”
+    Với khái niệm này số lần lặp sẽ được giảm đáng kể và bài toán sẽ tối ưu hơn
+
+-->
+
+<html>
+	<head>	
+	</head>
+	<body>
+		<script>
+			var n = prompt('Hãy Nhập Số N　:');
+			if(n<2){
+				document.write('N không phải số nguyên tố');
+			}	
+			for(i = 2; i <=n/2; i++){
+				if(n % i == 0){
+					document.write('N không phải số nguyên tố');
+				}
+				
+			}
+			document.write('N là số nguyên tố');	
+		</script>
+	</body>
+</html>

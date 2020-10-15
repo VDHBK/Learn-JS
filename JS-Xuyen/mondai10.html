@@ -1,0 +1,26 @@
+<!--          <<<<<<<<<<<ĐỀ BÀI>>>>>>>>>>>>>>
+    sử dụng function để giải quyết bài toán: nhập vào số tự nhiên n>0
+     và đưa ra giá trị của biểu thức A = 1/n + 2/n + 3/n + ... + n/ns
+-->
+
+<html>
+	<head>	
+	</head>
+	<body>
+		<script>
+            var n = prompt('Hãy Nhập số n:');
+
+                function myFunction(param){
+                     count = 0;
+                    if(param <=0){
+                        prompt('Hãy Nhập lại số n:')
+                    }
+                for(var i =1; i <=param; i++){
+                    count =count + (i/param);
+                }
+                document.write('Giá trị của biểu thức là:' +　count.toString())
+            }
+            myFunction(n);
+		</script>
+	</body>
+</html>
