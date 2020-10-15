@@ -1,0 +1,37 @@
+<!-- Bài 10:
+sử dụng function để giải quyết bài toán: nhập vào số tự nhiên n>0 
+và đưa ra giá trị của biểu thức A = 1/n + 2/n + 3/n + ... + n/n -->
+
+<html>
+	<head>	
+	</head>
+	<body>
+        <script language="javascript">
+   
+    function tinh_bieu_thuc(n)
+    {
+        // Biến tính tổng
+        var tong = 0;
+
+        // Tính toán
+        for (var i = 1; i <= n; i++){
+            tong += (1/i);
+        }
+
+        return tong;
+    }
+    // Lấy giá trị
+    var n = parseInt(prompt("Nhập số cần tính"));
+
+    // Kiểm tra giá trị
+    if (n <= 0){
+        alert("Bạn phải nhập số lớn hơn 0");
+    }
+    else{
+        document.write("Tổng giá trị biểu thức là: " + tinh_bieu_thuc(n));
+    }
+
+</script>
+     
+	</body>
+</html>

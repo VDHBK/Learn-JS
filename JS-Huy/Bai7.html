@@ -1,0 +1,52 @@
+<!-- Bài 7:
+Viết hàm kiểm tra một số bất kì nhập vào có phải số nguyên tố hay không dựa vào khái niệm: 
+“n là số nguyên tố thì trong khoảng từ 2 đến căn bậc hai cua n sẽ không tồn tại số mà n chia hết”
+Test với 2 số: 1123, 2345
+Với khái niệm này số lần lặp sẽ được giảm đáng kể và bài toán sẽ tối ưu hơn -->
+
+<html>
+	<head>	
+	</head>
+	<body>
+        <script language="javascript">
+            function kiem_tra_snt(n)
+            {
+                var flag = true;
+          
+                // Nếu n bé hơn 2 tức là không phải số nguyên tố
+                if (n < 2){
+                    flag = false;
+                }
+                else if (n == 2){
+                    flag = true;
+                }
+                else if (n % 2 == 0){
+                  flag = false;
+                }
+                else{
+                    // lặp từ 3 tới n-1 với bước nhảy là 2 (i+=2)
+                    for (var i = 3; i < Math.sqrt(n); i+=2)
+                    {
+                        if (n % i == 0){
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
+          
+                // Kiểm tra biến flag
+                if (flag == true){
+                    document.write(n + " là số nguyên tố <br/>");
+                }
+                else{
+                    document.write(n + " không phải là số nguyên tố <br/>");
+                }
+            }
+          
+            kiem_tra_snt(1123);
+            kiem_tra_snt(2345);
+     
+          </script>
+     
+	</body>
+</html>

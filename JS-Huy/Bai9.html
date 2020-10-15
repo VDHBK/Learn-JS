@@ -1,0 +1,35 @@
+<!-- Bài 9:
+Dùng vòng lặp While, viết hàm tính tổng các số chia hết cho 3 trong khoảng từ 0 đến n
+Test thử với n = 300, 500, 1000 -->
+
+<html>
+	<head>	
+	</head>
+	<body>
+        <script language="javascript">
+       
+    function tinh_tong(n)
+    {
+        var tong = 0;
+        var index = 0;
+
+        while (index <= n)
+        {
+           
+            if (index % 3 == 0){
+                tong += index;
+            }
+
+            // tăng biến đếm
+            index++;
+        }
+
+        document.write("Tổng số chia hết cho 3 từ 1 tới " + n + " là: " + tong + "<br/>");
+    }
+
+    tinh_tong(300);
+    tinh_tong(500);
+    tinh_tong(1000);
+</script>
+	</body>
+</html>
