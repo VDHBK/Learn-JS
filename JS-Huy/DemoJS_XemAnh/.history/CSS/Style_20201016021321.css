@@ -1,0 +1,14 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+ul,
+#main-image {
+}
+ul li {
+  list-style: none;
+}
+ul li img {
+  width: 150px;
+  cursor: pointer;
+}
